@@ -1,5 +1,22 @@
 #include "MyVector.h"
-#include "Test.h"
+
+MyVector::MyVector() : size(0), capacity(32) {
+	arr = new double[32];
+}
+
+MyVector::MyVector(const MyVector& myObj) : size(myObj.size), capacity(myObj.capacity) {
+	arr = new double[capacity];
+	for (size_t i = 0; i < size; ++i)
+	{
+		arr[i] = myObj.arr[i];
+	}
+};
+
+MyVector::MyVector(MyVector&& myObj) : size(myObj.size), capacity(myObj.capacity), arr(myObj.arr) {
+	myObj.size = 0;
+	myObj.capacity = 0;
+	myObj.arr = nullptr;
+};
 
 bool MyVector::empty() const {
 	if (size == 0) return true;
