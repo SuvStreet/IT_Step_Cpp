@@ -7,17 +7,9 @@ class MyVector
 	size_t size; // размер
 	size_t capacity; // ёмкость
 public:
-	MyVector() : size(0), capacity(32) {
-		arr = new double[32];
-	}
-
-	MyVector(const MyVector& myObj) : size(myObj.size), capacity(myObj.capacity) {
-		arr = new double[capacity];
-		for (size_t i = 0; i < size; ++i)
-		{
-			arr[i] = myObj.arr[i];
-		}
-	};
+	MyVector();
+	MyVector(const MyVector&); //конструктор копирования
+	MyVector(MyVector&&); // конструктор перемещения
 
 	~MyVector() {
 		delete [] arr;
