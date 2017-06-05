@@ -8,7 +8,7 @@ class Student
 	std::string city, educational, group;
 	int year, phone;
 public:
-	Student() {};
+	Student() = default;
 	~Student() = default;
 
 	void setName(const std::string value);
