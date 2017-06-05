@@ -68,9 +68,10 @@ int Student::getPhone() const
 
 void Student::init()
 {
-	std::string name, surname, patronymic;
-	std::string city, educational, group;
-	int year, phone;
+	setlocale(LC_ALL, "Russian");
+	std::cout << "Привествую Вас. Я результат вашей первой лабораторной работы.\n";
+	std::cout << "Пожалуйста введите свои данные которые я попрашу.\nХочу обратить Ваше внимание,\
+изменять Фамилию, Имя, Отчество и год вашего рождения, далее будет нельзя!\n\n";
 
 	std::cout << "Введите Ваше имя: ";
 	setlocale(LC_ALL, ".866");
@@ -114,6 +115,8 @@ void Student::init()
 	setlocale(LC_ALL, ".866");
 	std::cin >> group;
 	setGroup(group);
+
+	system("cls");
 }
 
 void Student::print()
@@ -161,9 +164,10 @@ void Student::choice()
 			setlocale(LC_ALL, ".866");
 			std::cin >> city;
 			setCity(city);
+			system("cls");
 
 			setlocale(LC_ALL, "Russian");
-			std::cout << "\nВаши изменённые данные.";
+			std::cout << "Ваши изменённые данные.";
 			print();
 
 			break;
@@ -174,9 +178,10 @@ void Student::choice()
 			setlocale(LC_ALL, ".866");
 			std::cin >> educational;
 			setEducational(educational);
+			system("cls");
 
 			setlocale(LC_ALL, "Russian");
-			std::cout << "\nВаши изменённые данные.";
+			std::cout << "Ваши изменённые данные.";
 			print();
 
 			break;
@@ -187,9 +192,10 @@ void Student::choice()
 			setlocale(LC_ALL, ".866");
 			std::cin >> group;
 			setGroup(group);
+			system("cls");
 
 			setlocale(LC_ALL, "Russian");
-			std::cout << "\nВаши изменённые данные.";
+			std::cout << "Ваши изменённые данные.";
 			print();
 
 			break;
@@ -200,17 +206,19 @@ void Student::choice()
 			setlocale(LC_ALL, ".866");
 			std::cin >> phone;
 			setPhone(phone);
+			system("cls");
 
 			setlocale(LC_ALL, "Russian");
-			std::cout << "\nВаши изменённые данные.";
+			std::cout << "Ваши изменённые данные.";
 			print();
 
 			break;
 		}
 		case 0:
 		{
-			std::cout << "\nВвывод на печать, нажмите Enter, что бы выйти из программы.\n\n";
+			std::cout << "\nВвывод на печать, нажмите Enter, что бы выйти из программы.\n";
 			
+			std::cin.get();
 			std::cin.get();
 			done = false;
 			break;
