@@ -1,0 +1,77 @@
+=========== "SourceCode.h" ===========
+
+#pragma once
+#include<iostream>
+#include<string>
+
+class SourceCode
+{
+	double* arr; // указатель на массив
+	size_t size; // размер
+	size_t capacity; // ёмкость
+public:
+	SourceCode(); // конструктор с параметрами
+	SourceCode(const SourceCode&); // конструктор копирования
+	SourceCode(SourceCode&&); // конструктор перемещения
+
+	SourceCode& SourceCode::operator=(const SourceCode&); // оператор копирующего присваивания (=)
+	SourceCode& SourceCode::operator=(SourceCode&&); // оператор перемещающего присваивания (=)
+
+	~SourceCode() { delete[] arr; };
+	
+};
+
+=========== "SourceCode.cpp" ===========
+
+#include"SourceCode.h"
+
+SourceCode::SourceCode() : size(0), capacity(32) {
+	arr = new double[32];
+}
+
+SourceCode::SourceCode(const SourceCode& myObj): size(myObj.size), capacity(myObj.capacity) {
+	arr = new double[capacity];
+	for (size_t i = 0; i < size; ++i)
+	{
+		arr[i] = myObj.arr[i];
+	}
+};
+
+SourceCode::SourceCode(SourceCode&& myObj) : size(myObj.size), capacity(myObj.capacity), arr(myObj.arr) {
+	myObj.size = 0;
+	myObj.capacity = 0;
+	myObj.arr = nullptr;
+};
+
+SourceCode& SourceCode::operator=(const SourceCode& newObj) {
+	if (this == &newObj) {
+		return *this;
+	}
+	size = newObj.size;
+	return *this;
+}
+
+SourceCode& SourceCode::operator=(SourceCode&& newObj) {
+	if (this == &newObj) {
+		return *this;
+	}
+	size = newObj.size;
+	delete[] arr;
+	arr = newObj.arr;
+	newObj.size = 0;
+	newObj.arr = nullptr;
+	return *this;
+}
+
+=========== "Main.cpp" ===========
+
+#include"SourceCode.h"
+
+int main()
+{
+	SourceCode Code;
+	SourceCode Code1;
+	Code1 = Code;
+
+	return 0;
+}
