@@ -9,7 +9,7 @@ class Triangle
 	int sideA, sideB, sideC, base, height;
 	float angle;
 public:
-	Triangle(){};
+	Triangle() {};
 
 	void setsideA(const int);
 	void setsideB(const int);
@@ -19,8 +19,8 @@ public:
 	void setangle(const float);
 
 	int getTriangleArea(int, int) const;
-	float getTriangleArea(int, int, float) const;
-	float getTriangleArea(int, int, int) const;
+	double getTriangleArea(int, int, float) const;
+	double getTriangleArea(double, double, double) const;
 
 	void Triangle::menu();
 };
