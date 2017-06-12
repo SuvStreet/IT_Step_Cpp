@@ -2,7 +2,6 @@
 
 #include<iostream>
 #include<string>
-#include<fstream>
 
 class Complex
 {
@@ -22,10 +21,10 @@ public:
 	friend Complex& operator+=(Complex&, const Complex&);
 	friend Complex& operator-=(Complex&, const Complex&);
 	Complex& operator*=(const Complex&);
-	friend Complex& operator/=(Complex&, const Complex&);
+	Complex& operator/=(const Complex&);
 
 	friend std::ostream& operator<<(std::ostream& os, const Complex&);
-	friend std::istream& operator>>(std::istream& is, Complex& com);
+	friend std::istream& operator >> (std::istream& is, Complex& com);
 
 	~Complex() = default;
 };
