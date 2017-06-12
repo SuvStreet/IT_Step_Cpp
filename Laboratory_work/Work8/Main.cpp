@@ -7,9 +7,12 @@ int main()
 	std::cin >> a;
 	std::cin >> b;
 
-	std::cout << a * b << std::endl;
-	a *= b;
-	std::cout << a << std::endl;
+	/*std::cout << a * b << std::endl;
+	std::cout << a << std::endl << std::endl;*/
+
+	std::cout << a / b << std::endl;
+	
+	std::cout << (a /= b) << std::endl;
 
 	return 0;
 }
