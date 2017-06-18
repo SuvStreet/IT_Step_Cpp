@@ -1,4 +1,4 @@
-#include"Header.h"
+#include"Pair.h"
 #include<iostream>
 
 void test()
@@ -11,12 +11,10 @@ void test()
 		std::cout << "Test 1: Error!!!\n";
 
 
-
 	if (obj.getSecond() == 'a')
 		std::cout << "Test 2: OK!\n";
 	else
 		std::cout << "Test 2: Error!!!\n";
-
 
 
 	obj.make_pair('a', 5);
@@ -27,12 +25,10 @@ void test()
 		std::cout << "Test 3: Error!!!\n";
 
 
-
 	if (obj.getSecond() == 5)
 		std::cout << "Test 4: OK!\n";
 	else
 		std::cout << "Test 4: Error!!!\n";
-
 
 
 	Pair<bool, bool> obj1(true);
@@ -43,8 +39,6 @@ void test()
 		std::cout << "Test 5: Error!!!\n";
 
 
-
-
 	obj1.make_pair(false);
 
 
@@ -52,14 +46,10 @@ void test()
 		std::cout << "Test 6: OK!\n";
 	else
 		std::cout << "Test 6: Error!!!\n";
-
-
-
 }
 
 int main()
 {
 	test();
-
 	return 0;
 }
