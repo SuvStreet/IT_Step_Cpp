@@ -30,7 +30,8 @@ U Pair<T, U>::getSecond() const {
 
 template<typename T, typename U>
 void Pair<T, U>::make_pair(const T a, const U b) {
-	Pair(a, b);
+	first = a;
+	second = b;
 }
 
 template<>
@@ -39,17 +40,15 @@ class Pair <bool, bool>{
 	bool second;
 public:
 	Pair(const bool);
-
 	~Pair() = default;
 
 	bool getFirst() const;
 	bool getSecond() const;
 
-	void make_pair(const bool, const bool);
+	void make_pair(const bool);
 };
 
-template<typename T, typename U>
-Pair<T, U>::Pair(const T a, const U b) : first(a), second(b) {}
+Pair<bool, bool>::Pair(const bool a) : first(a), second(a) {}
 
 bool Pair<bool, bool>::getFirst() const {
 	return first;
@@ -59,7 +58,7 @@ bool Pair<bool, bool>::getSecond() const {
 	return second;
 }
 
-template<typename T, typename U>
-void Pair<T, U>::make_pair(const T a, const U b) {
-	Pair(a, b);
+void Pair<bool, bool>::make_pair(const bool a) {
+	first = a;
+	second = a;
 }
