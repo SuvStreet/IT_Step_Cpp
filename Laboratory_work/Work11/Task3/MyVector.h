@@ -109,19 +109,8 @@ void MyVector<T>::insert(const T value, const size_t index) {
 		return;
 	}
 
-	if (size == capacity) {
-		T *new_arr = new T[capacity * 2];
-		capacity *= 2;
-		for (size_t i = 0; i < size; i++)
-			new_arr[i] = arr[i];
-		delete[]arr;
-		arr = new_arr;
-		arr[size] = value;
-		size = size + 1;
-	}
-
-	else if (index == size)
-		push_back(value);
+	if (size == capacity || index == size)
+		push_back(value);		
 
 	else {
 		T *new_arr = new T[capacity];
@@ -150,6 +139,6 @@ void MyVector<T>::resize(size_t value) {
 	capacity = value;
 	for (size_t i = 0; i < size; ++i)
 		new_arr[i] = arr[i];
-	delete [] arr;
+	delete[] arr;
 	arr = new_arr;
 }
