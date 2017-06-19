@@ -11,7 +11,7 @@ public:
 	Stack(const Stack&);
 	Stack(Stack&&);
 
-	~Stack() { delete [] stack; };
+	~Stack() { delete[] stack; };
 
 	bool empty() const; // проверяет, пуст ли стек
 	size_t getSize() const; // возвращает количество элементов в стеке
@@ -59,8 +59,8 @@ Stack<T>& Stack<T>::operator=(const Stack& newObj) {
 	if (this == &newObj)
 		return *this;
 
-	delete[] stack;
-	stack = T new[maxSize];
+	delete [] stack;
+	stack = new T[maxSize];
 	for (size_t i = 0; i < maxSize; ++i) {
 		stack[i] = newObj.stack[i];
 	}
@@ -74,6 +74,7 @@ Stack<T>& Stack<T>::operator=(Stack&& newObj) {
 	if (this == &newObj)
 		return *this;
 
+	delete [] stack;
 	stack = newObj.stack;
 	size = newObj.size;
 	maxSize = newObj.maxSize;
