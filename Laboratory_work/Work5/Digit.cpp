@@ -20,10 +20,6 @@ void Digit::setDigit(const int x) {
 	digit = x;
 }
 
-int Digit::getCounter() const {
-	return counter;
-}
-
 Digit Digit::operator-() {
 	Digit temp;
 	temp.digit = -digit;
