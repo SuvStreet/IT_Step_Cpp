@@ -15,7 +15,10 @@ public:
 
 	int getDigit() const;
 	void setDigit(const int);
-	int getCounter() const;
+
+	static int getCounter() {
+		return counter;
+	}
 
 	Digit operator-();
 
