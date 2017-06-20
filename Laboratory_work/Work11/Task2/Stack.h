@@ -60,7 +60,7 @@ Stack<T>& Stack<T>::operator=(const Stack& newObj) {
 		return *this;
 
 	delete [] stack;
-	stack = new T[maxSize];
+	stack = new T[newObj.maxSize];
 	for (size_t i = 0; i < maxSize; ++i) {
 		stack[i] = newObj.stack[i];
 	}
