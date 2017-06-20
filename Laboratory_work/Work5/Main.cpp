@@ -1,10 +1,7 @@
 #include "Digit.h"
-#include<iostream>
+#include "Test.h"
 
-int main()
-{
-	Digit a;
-	Digit b(10);
-
+int main(int argc, char* argv[]){
+	Test::test();
 	return 0;
 }
