@@ -17,11 +17,22 @@ int main()
 	// 3) Вывели в консоль размер и емкость вектора.
 
 	vec[0] = vec.size();
+	// front(0) = vec.size();
+	// vec.at(0) = vec.size();
 	// 4) Изменили значение первого элемента так, чтобы оно было равно количеству элементов в векторе
 
-	vec.erase(vec.begin() + 7);
-	vec.erase(vec.begin() + 14);
-	vec.erase(vec.begin() + 21);
+	size_t index = 0;
+	for (auto it = vec.begin(); it != vec.end();) {
+		if(index == 7 || index == 14 || index == 21) {
+			it = vec.erase(it++);
+		}
+		else { ++it; }
+		++index;
+	}
+	
+	// vec.erase(vec.begin() + 7);
+	// vec.erase(vec.begin() + 13);
+	// vec.erase(vec.begin() + 19);
 	// 5) Удалили из вектора элементы под индексами 7, 14 и 21.
 
 	size_t counter = 0;
