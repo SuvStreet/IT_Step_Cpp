@@ -21,17 +21,17 @@ void sort(T *arr, size_t size)
 }
 
 template<typename T>
-T find(T *arr, int size, T value)
+T find(T *arr, size_t size, T value)
 {
 	for (int i = 0; i < size; ++i)
 	{
 		if (arr[i] == value)
 		{
-			std::cout << i;
+			std::cout << "Ваше число находится под индексом [" << i << "]\n" << std::endl;
 			return i;
 		}
 	}
-	std::cout << "Число не найдено!!!" << std::endl;
+	std::cout << "Число не найдено!!!\n" << std::endl;
 	return 0;
 }
 
@@ -55,13 +55,15 @@ int main()
 		std::cin >> arr[i];
 	}
 	sort(arr, size);
-	std::cout << "Отсортированный массив:\n";
+	std::cout << "\nОтсортированный массив:\n";
 	print_array(arr, size, 'A');
-	std::cout << "\n" << std::endl;
+	std::cout << std::endl;
 
-	std::cout << "Введите число ко:\n";
+	size_t value;
+	std::cout << "Введите число которое хотите найти:\n";
+	std::cin >> value;
+	find<double>(arr, size, value);
 
-
-	delete [] arr;
+	delete[] arr;
 	return 0;
 }
