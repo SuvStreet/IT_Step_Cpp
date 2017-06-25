@@ -2,7 +2,7 @@
 #include "Windows.h"
 
 template<typename T>
-void sort(T *arr, size_t size)
+void sort(T *arr, const size_t size)
 {
 	for (int d = size / 2; d > 0; d /= 2)
 	{
@@ -21,7 +21,7 @@ void sort(T *arr, size_t size)
 }
 
 template<typename T>
-T find(T *arr, size_t size, T value)
+T find(T *arr, const size_t size, const T value)
 {
 	for (int i = 0; i < size; ++i)
 	{
