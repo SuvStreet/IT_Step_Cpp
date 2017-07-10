@@ -22,38 +22,43 @@ public:
 
 	Digit operator-();
 
-	Digit operator+(const Digit&);
-	Digit operator+(const int);
+	Digit operator+(const Digit&) const;
+	Digit operator+(const int) const;
+	friend Digit operator+(const int, const Digit&);
 
-	Digit operator-(const Digit&);
-	Digit operator-(const int);
+	Digit operator-(const Digit&) const;
+	Digit operator-(const int) const;
+	friend Digit operator-(const int, const Digit&);
 
-	Digit operator*(const Digit&);
-	Digit operator*(const int);
+	Digit operator*(const Digit&) const;
+	Digit operator*(const int) const;
+	friend Digit operator*(const int, const Digit&);
 
-	Digit operator/(const Digit&);
-	Digit operator/(const int);
+	Digit operator/(const Digit&) const;
+	Digit operator/(const int) const;
+	friend Digit operator/(const int, const Digit&);
 
-	Digit operator%(const Digit&);
-	Digit operator%(const int);
+	Digit operator%(const Digit&) const;
+	Digit operator%(const int) const;
+	friend Digit operator%(const int, const Digit&);
 
-	bool operator>(const Digit&);
-	bool operator>(const int);
+	bool operator>(const Digit&) const;
+	bool operator>(const int) const;
 
-	bool operator<(const Digit&);
-	bool operator<(const int);
+	bool operator<(const Digit&) const;
+	bool operator<(const int) const;
 
-	bool operator==(const Digit&);
-	bool operator==(const int);
+	bool operator==(const Digit&) const;
+	bool operator==(const int) const;
 
-	bool operator!=(const Digit&);
-	bool operator!=(const int);
+	bool operator!=(const Digit&) const;
+	bool operator!=(const int) const;
 
-	bool operator>=(const Digit&);
-	bool operator>=(const int);
+	bool operator>=(const Digit&) const;
+	bool operator>=(const int) const;
 
-	bool operator<=(const Digit&);
-	bool operator<=(const int);
+	bool operator<=(const Digit&) const;
+	bool operator<=(const int) const;
 
 	Digit& operator++();
 	Digit operator++(int);
