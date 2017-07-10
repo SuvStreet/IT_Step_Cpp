@@ -26,112 +26,120 @@ Digit Digit::operator-() {
 	return temp;
 }
 
-Digit Digit::operator+(const Digit& newDigit) {
-	Digit temp; // создаём временный объект
-	temp.digit = digit + newDigit.digit; // присваеваем правильное значение полю временного объекта
-	return temp; // возвращаем времменный объект
+Digit Digit::operator+(const Digit& newDigit) const {
+	return Digit(digit + newDigit.digit);
+
+	// Digit temp; создаём временный объект
+	// temp.digit = digit + newDigit.digit; присваеваем правильное значение полю временного объекта
+	// return temp; возвращаем времменный объект
 }
 
-Digit Digit::operator+(const int newDigit) { // перегрузка оператора перегрузки
-	Digit temp; // создаём временный объект
-	temp.digit = digit + newDigit; // присваеваем правильное значение полю временного объекта
-	return temp; // возвращаем времменный объект
+Digit Digit::operator+(const int newDigit) const { // перегрузка оператора перегрузки
+	return Digit(digit + newDigit);
+
+	// Digit temp; создаём временный объект
+	// temp.digit = digit + newDigit; присваеваем правильное значение полю временного объекта
+	// return temp; возвращаем времменный объект
 }
 
-Digit Digit::operator-(const Digit& newDigit) {
-	Digit temp;
-	temp.digit = digit - newDigit.digit;
-	return temp;
+Digit operator+(const int a, const Digit& b) {
+	return Digit(a + b.digit);
 }
 
-Digit Digit::operator-(const int newDigit) {
-	Digit temp;
-	temp.digit = digit - newDigit;
-	return temp;
+Digit Digit::operator-(const Digit& newDigit) const {
+	return Digit(digit - newDigit.digit);
 }
 
-Digit Digit::operator*(const Digit& newDigit) {
-	Digit temp;
-	temp.digit = digit * newDigit.digit;
-	return temp;
+Digit Digit::operator-(const int newDigit) const {
+	return Digit(digit - newDigit);
 }
 
-Digit Digit::operator*(const int newDigit) {
-	Digit temp;
-	temp.digit = digit * newDigit;
-	return temp;
+Digit operator-(const int a, const Digit& b) {
+	return Digit(a - b.digit);
 }
 
-Digit Digit::operator/(const Digit& newDigit) {
-	Digit temp;
-	temp.digit = digit / newDigit.digit;
-	return temp;
+Digit Digit::operator*(const Digit& newDigit) const {
+	return Digit(digit * newDigit.digit);
 }
 
-Digit Digit::operator/(const int newDigit) {
-	Digit temp;
-	temp.digit = digit / newDigit;
-	return temp;
+Digit Digit::operator*(const int newDigit) const {
+	return Digit(digit * newDigit);
 }
 
-Digit Digit::operator%(const Digit& newDigit) {
-	Digit temp;
-	temp.digit = digit % newDigit.digit;
-	return temp;
+Digit operator*(const int a, const Digit& b) {
+	return Digit(a * b.digit);
 }
 
-Digit Digit::operator%(const int newDigit) {
-	Digit temp;
-	temp.digit = digit % newDigit;
-	return temp;
+Digit Digit::operator/(const Digit& newDigit) const {
+	return Digit(digit / newDigit.digit);
 }
 
-bool Digit::operator>(const Digit& newDigit) { // перегрузка bool
+Digit Digit::operator/(const int newDigit) const {
+	return Digit(digit / newDigit);
+}
+
+Digit operator/(const int a, const Digit& b) {
+	return Digit(a / b.digit);
+}
+
+Digit Digit::operator%(const Digit& newDigit) const {
+	return Digit(digit % newDigit.digit);
+}
+
+Digit Digit::operator%(const int newDigit) const {
+	return Digit(digit % newDigit);
+}
+
+Digit operator%(const int a, const Digit& b) {
+	return Digit(a % b.digit);
+}
+
+bool Digit::operator>(const Digit& newDigit) const { // перегрузка bool
 	return digit > newDigit.digit;
 }
 
-bool Digit::operator>(const int newDigit) {
-	return digit > newDigit;
+bool Digit::operator>(const int newDigit) const {
+	return !(*this > newDigit);
 }
 
-bool Digit::operator<(const Digit& newDigit) {
+bool Digit::operator<(const Digit& newDigit) const {
 	return digit < newDigit.digit;
 }
 
-bool Digit::operator<(const int newDigit) { // перегрузка оператора перегрузки bool
-	return digit < newDigit;
+bool Digit::operator<(const int newDigit) const { // перегрузка оператора перегрузки bool
+	return !(*this < newDigit);
 }
 
-bool Digit::operator==(const Digit& newDigit) {
+bool Digit::operator==(const Digit& newDigit) const {
 	return digit == newDigit.digit;
 }
 
-bool Digit::operator==(const int newDigit) {
-	return digit == newDigit;
+bool Digit::operator==(const int newDigit) const {
+	return !(*this == newDigit);
 }
 
-bool Digit::operator!=(const Digit& newDigit) {
+bool Digit::operator!=(const Digit& newDigit) const {
 	return digit != newDigit.digit;
 }
 
-bool Digit::operator!=(const int newDigit) {
-	return digit != newDigit;
+bool Digit::operator!=(const int newDigit) const {
+	return !(*this != newDigit);
 }
 
-bool Digit::operator>=(const Digit& newDigit) {
+bool Digit::operator>=(const Digit& newDigit) const {
 	return digit >= newDigit.digit;
 }
 
-bool Digit::operator>=(const int newDigit) {
-	return digit >= newDigit;
+bool Digit::operator>=(const int newDigit) const {
+	return !(*this >= newDigit);
 }
 
-bool Digit::operator<=(const Digit& newDigit) {
+bool Digit::operator<=(const Digit& newDigit) const {
 	return digit <= newDigit.digit;
 }
 
-bool Digit::operator<=(const int newDigit) {
-	return digit <= newDigit;
+bool Digit::operator<=(const int newDigit) const {
+	return !(*this <= newDigit);
 }
 
 Digit& Digit::operator++() {
