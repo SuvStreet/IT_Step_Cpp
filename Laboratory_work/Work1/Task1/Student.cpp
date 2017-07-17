@@ -1,6 +1,8 @@
 #include "Student.h"
 #include <iostream>
 
+Student::Student(const std::string a, const std::string b, const std::string c, const size_t d) : name(a), surname(b), patronymic(c), year(d) {}
+
 void Student::setName(const std::string value)
 {
 	name = value;
@@ -21,9 +23,9 @@ void Student::setCity(const std::string value)
 	city = value;
 }
 
-void Student::setEducational(const std::string value)
+void Student::setUniversity(const std::string value)
 {
-	educational = value;
+	university = value;
 }
 
 void Student::setGroup(const std::string value)
@@ -61,9 +63,9 @@ std::string Student::getCity() const
 	return city;
 }
 
-std::string Student::getEducational() const
+std::string Student::getUniversity() const
 {
-	return educational;
+	return university;
 }
 
 std::string Student::getGroup() const
@@ -111,8 +113,8 @@ void Student::init()
 	setCity(city);
 
 	std::cout << "Enter the name of the institution where you study: "; // Введите название учебного завидения в котором вы учитесь
-	std::cin >> educational;
-	setEducational(educational);
+	std::cin >> university;
+	setUniversity(university);
 
 	std::cout << "Finally, enter your group number: "; // Наконец, введите номер своей группы
 	std::cin >> group;
@@ -133,10 +135,10 @@ void Student::print()
 	std::cout << "The name of the city in which you are registered: "; // Название города в котором Вы прописаны
 	std::cout << getCity() << std::endl;
 
-	std::cout << "Name of the educational institution in which you study: "; // Название учебного заведения, в котором вы учитесь
-	std::cout << getEducational() << std::endl;
+	std::cout << "Name of the University institution in which you study: "; // Название учебного заведения, в котором вы учитесь
+	std::cout << getUniversity() << std::endl;
 
-	std::cout << "Number of your group in an educational institution: "; // Номер вашей группы в учебном заведении
+	std::cout << "Number of your group in an University institution: "; // Номер вашей группы в учебном заведении
 	std::cout << getGroup() << "\n" << std::endl;
 }
 
@@ -145,7 +147,7 @@ void Student::choice()
 	bool done = true;
 	while (done)
 	{
-		std::cout << "Do you want to change something?\n1 - Place of registration;\n2 - Educational institution;\n3 - Group number;\n4 - Phone; \n0 - I'm satisfied with everything.\nYour choice: ";
+		std::cout << "Do you want to change something?\n1 - Place of registration;\n2 - University institution;\n3 - Group number;\n4 - Phone; \n0 - I'm satisfied with everything.\nYour choice: ";
 		// Вы хотите что-то изменить? 1 - Место прописки 2 - Учебное заведение 3 - Номер группы 4 - Телефон 0 - Я доволен всем. Ваш выбор:
 
 		int choice;
@@ -166,9 +168,9 @@ void Student::choice()
 		}
 		case 2:
 		{
-				  std::cout << "\nEnter a new name for the educational institution: "; // Введите новое название учебного заведения
-				  std::cin >> educational;
-				  setEducational(educational);
+				  std::cout << "\nEnter a new name for the University institution: "; // Введите новое название учебного заведения
+				  std::cin >> university;
+				  setUniversity(university);
 				  system("cls");
 
 				  std::cout << "Your changed data."; // Ваши измененные данные
