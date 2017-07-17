@@ -1,12 +1,10 @@
 #pragma once
 #include<string>
-#include<iostream>
 
 class Student
 {
-	std::string name, surname, patronymic;
-	std::string city, educational, group;
-	int year, phone;
+	std::string name, surname, patronymic, city, educational, group, phone;
+	size_t year;
 public:
 	Student() = default;
 	~Student() = default;
@@ -17,8 +15,8 @@ public:
 	void setCity(const std::string value);
 	void setEducational(const std::string value);
 	void setGroup(const std::string value);
-	void setYear(const int value);
-	void setPhone(const int value);
+	void setYear(const size_t value);
+	void setPhone(const std::string value);
 
 	std::string getName() const;
 	std::string getSurname() const;
@@ -26,8 +24,8 @@ public:
 	std::string getCity() const;
 	std::string getEducational() const;
 	std::string getGroup() const;
-	int getYear() const;
-	int getPhone() const;
+	size_t getYear() const;
+	std::string getPhone() const;
 
 	void init();
 	void print();
