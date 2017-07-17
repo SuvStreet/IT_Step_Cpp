@@ -3,10 +3,11 @@
 #include <iostream>
 #include <exception>
 
-Circle::Circle(const double a, const double b) {
+Circle::Circle(const double a, const double b, const double c) {
 	if (a > 0) {
 		radius = a;
-		centerX_Y = b;
+		centerX = b;
+		centerY = c;
 	}
 	else std::cout << "Такого круга не существует!!!\n";
 }
@@ -19,12 +20,20 @@ void Circle::setSideA(const double newRadius) {
 	radius = newRadius;
 }
 
-double Circle::getCenterX_Y() const {
-	return centerX_Y;
+double Circle::getCenterX() const {
+	return centerX;
 }
 
-void Circle::setCenterX_Y(const double newCenterX_Y) {
-	centerX_Y = newCenterX_Y;
+void Circle::setCenterX(const double newCenterX) {
+	centerX = newCenterX;
+}
+
+double Circle::getCenterY() const {
+	return centerY;
+}
+
+void Circle::setCenterY(const double newCenterY) {
+	centerY = newCenterY;
 }
 
 double Circle::getArea() {
