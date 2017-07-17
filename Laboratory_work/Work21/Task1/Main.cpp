@@ -6,7 +6,7 @@
 #include "Kolotysha_Circle.h"
 
 template<typename T>
-void exception(T a){
+void exception(T a) {
 	try {
 		std::cout << a.getArea() << std::endl;
 	}
@@ -17,7 +17,7 @@ void exception(T a){
 
 int main() {
 	setlocale(LC_ALL, "Russian");
-	
+
 	std::cout << "\nТреугольник\n" << std::endl;
 	Triangle a(15, 180, 40, 1);
 	exception(a);
@@ -25,7 +25,7 @@ int main() {
 	std::cout << "\nПараллелограмм\n" << std::endl;
 	Parallelogram b(15, 30, 180);
 	exception(b);
-	
+
 	std::cout << "\nПрямоугольник\n" << std::endl;
 	Rectangle c(15, -30);
 	exception(c);
@@ -35,7 +35,7 @@ int main() {
 	exception(d);
 
 	std::cout << "\nКруг\n" << std::endl;
-	Circle e(-15, 20);
+	Circle e(15, 20, -10);
 	exception(e);
 
 	std::cout << std::endl;
