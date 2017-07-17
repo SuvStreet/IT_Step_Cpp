@@ -35,7 +35,7 @@ int main() {
 	exception(d);
 
 	std::cout << "\nКруг\n" << std::endl;
-	Circle e(-15);
+	Circle e(-15, 20);
 	exception(e);
 
 	std::cout << std::endl;
