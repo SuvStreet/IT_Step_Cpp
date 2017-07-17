@@ -1,4 +1,5 @@
-#include "MyClass.h"
+#include "Student.h"
+#include <iostream>
 
 int main()
 {
@@ -6,8 +7,7 @@ int main()
 
 	Dima.init();
 
-	setlocale(LC_ALL, "Russian");
-	std::cout << "По вашим данным, я создала Вашу везитницу.";
+	std::cout << "According to your information, a business card was created."; // Согласно вашей информации, была создана визитная карточка
 	Dima.print();
 
 	Dima.choice();
