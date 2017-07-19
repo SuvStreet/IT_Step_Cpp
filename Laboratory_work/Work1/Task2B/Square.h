@@ -1,19 +1,16 @@
 #pragma once
-#include<cmath>
-#include<iostream>
-#include<string>
 
 class Square
 {
-	int sideA, sideB;
+	double side = 0;
 public:
 	Square() = default;
 
-	void setsideA(const int);
-	void setsideB(const int);
-	
-	int getSquareArea(int) const;
-	int getSquareArea(int, int) const;
+	void setsideA(const double);
+	void setsideB(const double);
 
-	void Square::menu();
+	double squareArea(double) const;
+	double squareArea(double, double) const;
+	
+	~Square() = default;
 };
