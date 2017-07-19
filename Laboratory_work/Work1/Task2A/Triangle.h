@@ -18,7 +18,5 @@ public:
 	double getTriangleArea(int, int, float) const;
 	double getTriangleArea(double, double, double) const;
 
-	void Triangle::menu();
-
 	~Triangle() {}
 };
