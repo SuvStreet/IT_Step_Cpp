@@ -1,23 +1,23 @@
 #include"PrettyPrint.h"
 
-std::string PrettyPrint::concatenation(std::string a, std::string b) const {
-	std::string str = a + '.' + b;
-	return str;
+std::string PrettyPrint::concatenate(std::string& a, std::string& b) {
+	return a + '.' + b;
 }
 
-std::string PrettyPrint::substitution(std::string c) {
-	for (std::string::iterator it = c.begin(); it != c.end(); ++it)
-
-	if (*it == 'a')*it = 'o';
+std::string PrettyPrint::replace(std::string& c) {
+	for (std::string::iterator it = c.begin(); it != c.end(); ++it) {
+		if (*it == 'a')*it = 'o';
+		else if (*it == 'A')*it = 'O';
+		else if (*it == 'а')*it = 'о';
+		else if(*it == 'А')*it = 'О';
+	}
 	return c;
 }
 
-void PrettyPrint::coup(std::string *d) {
-	int a1 = (*d).size();
-	std::string temp = (*d);
-	for (int a2 = 0; a2 < (*d).size() / 2; a2++, a1--)
-	{
-		(*d).at(a2) = (*d).at(a1 - 1);
-		(*d).at(a1 - 1) = (temp).at(a2);
+std::string PrettyPrint::coup(std::string& d) {
+	std::string newTemp = "";
+	for (int i = d.size() - 1; i >= 0; --i) {
+		newTemp += d[i];
 	}
+	return newTemp;
 }
