@@ -1,1 +1,0 @@
-[**Laboratory_work1**](https://github.com/SuvStreet/IT_Step_Cpp/tree/master/Laboratory_work/Work1)
