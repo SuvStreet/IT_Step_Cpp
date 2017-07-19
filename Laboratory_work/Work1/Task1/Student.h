@@ -3,10 +3,15 @@
 
 class Student
 {
-	std::string name, surname, patronymic, city, university, group, phone;
-	size_t year;
+	std::string name = "name";
+	std::string surname = "surname";
+	std::string patronymic = "patronymic";
+	std::string city = "city";
+	std::string university = "university";
+	std::string group = "group";
+	std::string phone = "phone";
+	size_t year = 2000;
 public:
-	Student() = default;
 	Student(const std::string, const std::string, const std::string, const size_t);
 	~Student() = default;
 
@@ -27,8 +32,4 @@ public:
 	std::string getGroup() const;
 	size_t getYear() const;
 	std::string getPhone() const;
-
-	void init();
-	void print();
-	void choice();
 };
