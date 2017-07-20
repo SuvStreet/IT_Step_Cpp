@@ -24,7 +24,7 @@ inline void MyClass::foo() { /*…*/ }
 Встроенные (inline) методы: синтаксис
 ---
 
-```cpp
+
 ------------------------------|--------------------------------------------
 class A {                     |            class A {
   int value;                  |               int value;
@@ -38,7 +38,7 @@ public:                       |            public:
   value = x;                  |
   }                           |            inline void A::setValue(int x)
 };                            |               { value = x; }
-```
+
 
 Класс std::string
 ---
