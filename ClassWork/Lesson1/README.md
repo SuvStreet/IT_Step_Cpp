@@ -174,6 +174,6 @@ void MyFirstClass::setCode(int x) { code = x; }
 void MyFirstClass::print() { std::cout << code << std::endl; }
 ```
 
-***1 пара "С++: основы ООП" 22.05.2017***
-
 [**-->Laboratory_work1<--**](https://github.com/SuvStreet/IT_Step_Cpp/tree/master/Laboratory_work/Work1)
+
+**22.05.2017**
