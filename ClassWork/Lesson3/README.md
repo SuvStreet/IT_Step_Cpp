@@ -1,5 +1,5 @@
 C++: Статические поля и методы
----
+=====================
 
 Статическое поле
 ---
@@ -175,3 +175,5 @@ void f(){
 ```
 
 **3 пара "C++: Статические поля и методы" 24.05.2017**
+
+[**-->Laboratory_work2<--**](https://github.com/SuvStreet/IT_Step_Cpp/tree/master/Laboratory_work/Work2)
