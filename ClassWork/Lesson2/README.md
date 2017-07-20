@@ -25,6 +25,7 @@ inline void MyClass::foo() { /*…*/ }
 ---
 
 ```cpp
+---------------------------------------------------------------------------
 class A {                     |            class A {
   int value;                  |               int value;
 public:                       |            public:
