@@ -37,7 +37,7 @@ public:                                   public:
   value = x;
   }                                       inline void A::setValue(int x)
 };                                           { value = x; }
-
+```
 
 Класс std::string
 ---
