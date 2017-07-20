@@ -31,10 +31,10 @@ public:                                   public:
   int getValue() const                      int getValue() const;
   {                                          void setValue(int x);
     return value;                         };     
-  }                           
+  }
   void setValue(int x)                    inline int A::getValue() const
   {                                          { return value; }
-  value = x;                  
+  value = x;
   }                                       inline void A::setValue(int x)
 };                                           { value = x; }
 
