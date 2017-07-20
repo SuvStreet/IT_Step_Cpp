@@ -8,7 +8,7 @@
 => растёт скорость исполнения программы
 2. все методы, тело которых находится в определении класса, являются встроенными,
 
-НО:
+**НО:**
 
 3. подходит, если тело функции не очень большое
 4. чтобы сделать встроенным метод, тело которого находится вне определения класса,
@@ -47,7 +47,7 @@ public:                                   public:
 
 ```cpp
 #include <string>
-void f(){
+void f() {
   std::string myString = "Hello, world!";
 }
 ```
@@ -57,7 +57,7 @@ void f(){
 
 ```cpp
 #include <string>
-void f(){
+void f() {
   std::string str0;
   std::string str1 = "";
   std::string str2 = "Hello, world!";
@@ -78,7 +78,7 @@ void f(){
 
 ```cpp
 #include <string>
-void f(){
+void f() {
   std::string str = "Hello, world!";
   int len1 = str.length();                      // len1 = 13;
   int len2 = str.size();                        // len2 = 13;
@@ -94,7 +94,7 @@ void f(){
 
 ```cpp
 #include <string>
-void f(){
+void f() {
   std::string str = "abc";
   char symb1 = str[0];
   char symb2 = str.at(0);
@@ -110,7 +110,7 @@ void f(){
 #include <string>
 #include <iostream>
 std::string str = "Hello, world!";
-for (int i = 0; i < str.length(); ++i){
+for (int i = 0; i < str.length(); ++i) {
   std::cout << str[i];
 }
 ```
@@ -119,7 +119,7 @@ for (int i = 0; i < str.length(); ++i){
 #include <string>
 #include <iostream>
 std::string str = "Hello, world!";
-for (std::string::iterator it = str.begin(); it != str.end(); ++it){
+for (std::string::iterator it = str.begin(); it != str.end(); ++it) {
   std::cout << *it;
 }
 ```
@@ -131,7 +131,7 @@ for (std::string::iterator it = str.begin(); it != str.end(); ++it){
 #include <string>
 #include <iostream>
 std::string str = "Hello, world!";
-for (auto symbol : str){
+for (auto symbol : str) {
   std::cout << symbol;
 }
 std::cout << std::endl;
@@ -147,7 +147,7 @@ std::cout << std::endl;
 ```cpp
 #include <string>
 #include <iostream>
-void f(){
+void f() {
   std::string str1 = "abc";
   std::string str2 = "abcd";
   if (str1 != str2) { str1 += str2; }
