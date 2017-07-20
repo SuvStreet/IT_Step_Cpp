@@ -84,4 +84,6 @@ public:
 
 __Если в классе есть конструктор копирования, то в классе нужно реализовать деструктор.__
 
+[**-->Laboratory_work3<--**](https://github.com/SuvStreet/IT_Step_Cpp/tree/master/Laboratory_work/Work3)
+
 **29.05.2017**
