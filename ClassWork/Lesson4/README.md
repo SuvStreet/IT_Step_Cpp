@@ -14,7 +14,7 @@
 Ключевое слово this: пример 1
 ---
 
-myObj.setX(3); => setX(&myObj, 3); => setX(this, 3);
+__myObj.setX(3); => setX(&myObj, 3); => setX(this, 3);__
 
 ```cpp
 void MyClass ::setX(int x)  
