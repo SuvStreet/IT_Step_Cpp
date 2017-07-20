@@ -25,18 +25,18 @@ inline void MyClass::foo() { /*…*/ }
 ---
 
 ```cpp
-class A {                                 class A {
-  int value;                                 int value;
-public:                                   public:
-  int getValue() const                       int getValue() const;
-  {                                          void setValue(int x);
-    return value;                         };     
-  }
-  void setValue(int x)                    inline int A::getValue() const
-  {                                          { return value; }
-  value = x;
-  }                                       inline void A::setValue(int x)
-};                                           { value = x; }
+class A {                     |            class A {
+  int value;                  |               int value;
+public:                       |            public:
+  int getValue() const        |              int getValue() const;
+  {                           |               void setValue(int x);
+    return value;             |            };     
+  }                           |
+  void setValue(int x)        |            inline int A::getValue() const
+  {                           |               { return value; }
+  value = x;                  |
+  }                           |            inline void A::setValue(int x)
+};                            |               { value = x; }
 ```
 
 Класс std::string
