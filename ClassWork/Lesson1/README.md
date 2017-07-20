@@ -179,6 +179,6 @@ void MyFirstClass::setCode(int x) { code = x; }
 void MyFirstClass::print() { std::cout << code << std::endl; }
 ```
 
-[**-->Laboratory_work1<--**](https://github.com/SuvStreet/IT_Step_Cpp/tree/master/Laboratory_work/Work1)
+[**-->     Laboratory_work1     <--**](https://github.com/SuvStreet/IT_Step_Cpp/tree/master/Laboratory_work/Work1)
 
 **22.05.2017**
