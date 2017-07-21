@@ -2,15 +2,15 @@
 --------------|--------------
  `operator++` | `operator++`
  `operator*`  | `operator*`
- `operator->` |
- `operator==` |
- `operator!=` |
+ operator->   |
+ operator==   |
+ operator!=   |
  `operator=`  | `operator=`
               
    Однонаправленные   |   Двунаправленные
 ----------------------|----------------------
   `operator++`        | `operator++`
-                      | `operator--`
+                      | operator--`
   `operator*`         | `operator*`
   `operator->`        | `operator->`
   `operator==`        | `operator==`
