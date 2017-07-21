@@ -41,19 +41,29 @@ std::set<std::string> mySet;
 * последовательные
 
 ```cpp
-std::array (C++11), std::vector, std::deque, std::list, std::forward_list (C++11)
+std::array (C++11)
+std::vector
+std::deque
+std::list
+std::forward_list (C++11)
 ```
 
 * ассоциативные
 
 ```cpp
-std::map, std::set, std::multimap, std::multiset
+std::map
+std::set
+std::multimap
+std::multiset
 ```
 
 * неупорядоченные ассоциативные
 
 ```cpp
-std::unordered_map (C++11), std::unordered_set (C++11), std::unordered_multimap (C++11), std::unordered_multiset (C++11)
+std::unordered_map (C++11)
+std::unordered_set (C++11)
+std::unordered_multimap (C++11)
+std::unordered_multiset (C++11)
 ```
 
 * адаптеры
@@ -272,6 +282,36 @@ void f() {
               |              |                      |                      |  `operatoroperator+=`
               |              |                      |                      |  `operator-=`
               |              |                      |                      |  `operator[]`
+
+   Однонаправленные   |   Двунаправленные    |   Произвольного доступа
+----------------------|----------------------|-----------------------------
+  `operator++`        | `operator++`         |  `operator++`
+                      | `operator--`         |  `operator--`
+  `operator*`         | `operator*`          |  `operator*`
+  `operator->`        | `operator->`         |  `operator->`
+  `operator==`        | `operator==`         |  `operator==`
+  `operator!=`        | `operator!=`         |  `operator!=`
+  `operator=`         | `operator=`          |  `operator=`
+                      |                      |  `operator+`
+                      |                      |  `operator-`
+                      |                      |  `operatoroperator+=`
+                      |                      |  `operator-=`
+                      |                      |  `operator[]`
+
+   Произвольного доступа
+-----------------------------
+  `operator++`
+  `operator--`
+  `operator*`
+  `operator->`
+  `operator==`
+  `operator!=`
+  `operator=`
+  `operator+`
+  `operator-`
+  `operatoroperator+=`
+  `operator-=`
+  `operator[]`
 
 Итераторы (пример)
 ---
