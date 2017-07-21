@@ -268,50 +268,22 @@ void f() {
 * **двунаправленные** (доступ к следующему и предыдущему элементам)
 * **произвольного доступа** (доступ к любому элементу по индексу)
 
+```cpp
     Входные   |   Выходные   |   Однонаправленные   |   Двунаправленные    |   Произвольного доступа
 --------------|--------------|----------------------|----------------------|-----------------------------
- `operator++` | `operator++` |  `operator++`        | `operator++`         |  `operator++`
-              |              |                      | `operator--`         |  `operator--`
- `operator*`  | `operator*`  |  `operator*`         | `operator*`          |  `operator*`
- `operator->` |              |  `operator->`        | `operator->`         |  `operator->`
- `operator==` |              |  `operator==`        | `operator==`         |  `operator==`
- `operator!=` |              |  `operator!=`        | `operator!=`         |  `operator!=`
- `operator=`  | `operator=`  |  `operator=`         | `operator=`          |  `operator=`
-              |              |                      |                      |  `operator+`
-              |              |                      |                      |  `operator-`
-              |              |                      |                      |  `operatoroperator+=`
-              |              |                      |                      |  `operator-=`
-              |              |                      |                      |  `operator[]`
-
-   Однонаправленные   |   Двунаправленные    |   Произвольного доступа
-----------------------|----------------------|-----------------------------
-  `operator++`        | `operator++`         |  `operator++`
-                      | `operator--`         |  `operator--`
-  `operator*`         | `operator*`          |  `operator*`
-  `operator->`        | `operator->`         |  `operator->`
-  `operator==`        | `operator==`         |  `operator==`
-  `operator!=`        | `operator!=`         |  `operator!=`
-  `operator=`         | `operator=`          |  `operator=`
-                      |                      |  `operator+`
-                      |                      |  `operator-`
-                      |                      |  `operatoroperator+=`
-                      |                      |  `operator-=`
-                      |                      |  `operator[]`
-
-   Произвольного доступа
------------------------------
-  `operator++`
-  `operator--`
-  `operator*`
-  `operator->`
-  `operator==`
-  `operator!=`
-  `operator=`
-  `operator+`
-  `operator-`
-  `operatoroperator+=`
-  `operator-=`
-  `operator[]`
+  operator++  |  operator++  |   operator++         |  operator++          |   operator++
+              |              |                      |  operator--          |   operator--
+  operator*   |  operator*   |   operator*          |  operator*`          |   operator*
+  operator->  |              |   operator->         |  operator->          |   operator->
+  operator==  |              |   operator==         |  operator==          |   operator==
+  operator!=  |              |   operator!=         |  operator!=          |   operator!=
+  operator=   |  operator=   |   operator=          |  operator=           |   operator=
+              |              |                      |                      |   operator+
+              |              |                      |                      |   operator-
+              |              |                      |                      |   operatoroperator+=
+              |              |                      |                      |   operator-=
+              |              |                      |                      |   operator[]
+```
 
 Итераторы (пример)
 ---
