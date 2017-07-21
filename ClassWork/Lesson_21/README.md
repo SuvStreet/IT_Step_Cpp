@@ -20,7 +20,7 @@ greater          |     `>`
 less             |     `<`
 greater_equal    |     `>=`
 less_equal       |     `<=`
-logical_or       |     `||`
+logical_or       |     ||
 
 * **нужно включить <functional>**
 * **не принимают аргументы**
