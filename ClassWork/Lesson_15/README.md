@@ -187,4 +187,4 @@ void f() {
 
 [**-->     Laboratory_work11A     <--**](https://github.com/SuvStreet/IT_Step_Cpp/tree/master/Laboratory_work/Work11A)
 
-**14.06.2017*
+**14.06.2017**
