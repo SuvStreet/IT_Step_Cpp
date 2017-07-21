@@ -273,14 +273,14 @@ void f() {
 --------------|--------------|----------------------|----------------------|-----------------------------
   operator++  |  operator++  |   operator++         |  operator++          |   operator++
               |              |                      |  operator--          |   operator--
-  operator*   |  operator*   |   operator*          |  operator*`          |   operator*
+  operator*   |  operator*   |   operator*          |  operator*           |   operator*
   operator->  |              |   operator->         |  operator->          |   operator->
   operator==  |              |   operator==         |  operator==          |   operator==
   operator!=  |              |   operator!=         |  operator!=          |   operator!=
   operator=   |  operator=   |   operator=          |  operator=           |   operator=
               |              |                      |                      |   operator+
               |              |                      |                      |   operator-
-              |              |                      |                      |   operatoroperator+=
+              |              |                      |                      |   operator+=
               |              |                      |                      |   operator-=
               |              |                      |                      |   operator[]
 ```
