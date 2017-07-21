@@ -2,9 +2,9 @@
 --------------|--------------
  `operator++` | `operator++`
  `operator*`  | `operator*`
- `operator->` | q
- `operator==` | q
- `operator!=` | q
+ `operator->` | sdcvf
+ `operator==` | sfe
+ `operator!=` | sef
  `operator=`  | `operator=`
               
    Однонаправленные   |   Двунаправленные
