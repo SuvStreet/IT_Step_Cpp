@@ -210,6 +210,6 @@ while (tmp != nullptr) {
 * осуществляется только последовательный доступ к элементам
 * => сложность прямого доступа к элементу
 
-[**-->     Laboratory_work24     <--**](https://github.com/SuvStreet/IT_Step_Cpp/tree/master/Laboratory_work/Work1)
+[**-->     Laboratory_work24     <--**](https://github.com/SuvStreet/IT_Step_Cpp/tree/master/Laboratory_work/Work24)
 
 **18.07.2017**
