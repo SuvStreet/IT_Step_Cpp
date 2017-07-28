@@ -65,7 +65,7 @@ void CrosswordSolver::addBase(std::string word) { // добовление сло
 	}
 }
 
-void CrosswordSolver::getAllWithLen(size_t value, std::string name) { // поиск по длине слова в файле указанным пользователем
+void CrosswordSolver::getAllWithLen(size_t value, std::string name) { // поиск по длине слова и запись их в файл указанным пользователем
 
 	std::ofstream fileout;
 	fileout.open(name);
@@ -79,7 +79,7 @@ void CrosswordSolver::getAllWithLen(size_t value, std::string name) { // пои�
 	fileout.close();
 }
 
-void CrosswordSolver::getAllWithInit(char value, std::string name) { // поиск слов по первой букве в файле указанным пользователем
+void CrosswordSolver::getAllWithInit(char value, std::string name) { // поиск слов по первой букве и запись их в файл указанным пользователем
 
 	std::ofstream fileout;
 	fileout.open(name);
@@ -94,7 +94,7 @@ void CrosswordSolver::getAllWithInit(char value, std::string name) { // поис
 	fileout.close();
 }
 
-void CrosswordSolver::getAnagrams(std::string value, std::string name) { // поиск анаграмм в файле указанным пользователем
+void CrosswordSolver::getAnagrams(std::string value, std::string name) { // поиск анаграмм и запись их в файл указанным пользователем
 
 	std::ofstream fileout;
 	fileout.open(name);
